@@ -8,12 +8,12 @@
   
 - name: "Retrieve route to mobile-stats-server"
   shell: "oc get routes mobile-stats-server -n {{ namespace }} | grep -v NAME | awk '{print $2}'"
-  register: fhsync_route
+  register: stats_route
 
 - name: "Create mobile-stats-server secret yaml file"
   template:
     src: secret.yml.j2
     dest: /tmp/secret.yaml
 
-- name: "Create FH stats-server secret"
+- name: "Create FH statsma-server secret"
   shell: "oc create -f /tmp/secret.yaml -n {{ namespace }}"

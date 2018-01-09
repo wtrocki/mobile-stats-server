@@ -6,7 +6,7 @@ async: optional
 tags:
   - mobile-service
 metadata:
-  displayName: Stats Server
+  displayName: Stats Server local
   serviceName: mobile-stats-server
   integrations: keycloak,apiKeys
   imageUrl: "https://avatars3.githubusercontent.com/u/772226?s=200&v=4"
