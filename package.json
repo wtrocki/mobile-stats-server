@@ -1,0 +1,23 @@
+{
+  "name": "stats-server",
+  "version": "1.0.0",
+  "description": "Server with routes that expose the stats module",
+  "scripts": {
+    "start": "SERVER_PORT=3000 node app.js",
+    "startdev": "npm start",
+    "format": "semistandard --fix ./*.js"
+  },
+  "author": "wtr@redhat.com",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "async": "^2.5.0",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "prom-client": "^10.2.2",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "semistandard": "^11.0.0"
+  }
+}
