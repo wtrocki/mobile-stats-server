@@ -14,6 +14,7 @@ cnZlcgogICAgZnJlZTogVHJ1ZQogICAgbWV0YWRhdGE6IHt9CiAgICBwYXJhbWV0ZXJzOiBbXQ=="
 
 
 
+
 COPY playbooks /opt/apb/actions
 COPY roles /opt/ansible/roles
 RUN chmod -R g=u /opt/{ansible,apb}
