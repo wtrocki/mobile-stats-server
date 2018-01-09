@@ -1,4 +1,4 @@
-- name: fh-sync-server-apb playbook to deprovision the application
+- name: mobile-stats-server-apb playbook to deprovision the application
   hosts: localhost
   gather_facts: false
   connection: local
@@ -6,5 +6,5 @@
   - role: ansible.kubernetes-modules
     install_python_requirements: no
   - role: ansibleplaybookbundle.asb-modules
-  - role: deprovision-fh-sync-server-apb
+  - role: deprovision-mobile-stats-server-apb
     playbook_debug: false
