@@ -1,0 +1,19 @@
+- name: "Create mobile-stats-server deploy yaml file"
+  template:
+    src: deploy.yml.j2
+    dest: /tmp/deploy.yaml
+
+- name: "Create mobile-stats-server resources"
+  shell: "oc new-app -f /tmp/deploy.yaml -n {{ namespace }}"
+  
+- name: "Retrieve route to mobile-stats-server"
+  shell: "oc get routes mobile-stats-server -n {{ namespace }} | grep -v NAME | awk '{print $2}'"
+  register: fhsync_route
+
+- name: "Create mobile-stats-server secret yaml file"
+  template:
+    src: secret.yml.j2
+    dest: /tmp/secret.yaml
+
+- name: "Create FH stats-server secret"
+  shell: "oc create -f /tmp/secret.yaml -n {{ namespace }}"

@@ -23,6 +23,7 @@ objects:
     labels:
       app: mobile-stats-server
       template: mobile-stats-server
+      mobile: enabled
   spec:
     ports:
     - name: mobile-stats-server
@@ -40,6 +41,7 @@ objects:
     labels:
       app: mobile-stats-server
       template: mobile-stats-server
+      mobile: enabled
     name: mobile-stats-server
   spec:
     replicas: 1
@@ -85,6 +87,7 @@ objects:
       template.openshift.io/expose-uri: "https://{.spec.host}{.spec.path}"
     name: mobile-stats-server
     labels:
+      mobile: enabled
       app: mobile-stats-server
       template: mobile-stats-server
   spec:

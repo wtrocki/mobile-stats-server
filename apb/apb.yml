@@ -1,0 +1,20 @@
+version: 1.0
+name: mobile-stats-server-apb
+description: Stats Server APB
+bindable: False
+async: optional
+tags:
+  - mobile-service
+metadata:
+  displayName: Stats Server
+  serviceName: mobile-stats-server
+  integrations: keycloak,apiKeys
+  imageUrl: "https://avatars3.githubusercontent.com/u/772226?s=200&v=4"
+  documentationUrl: "http://feedhenry.org/projects/"
+  providerDisplayName: "Red Hat, Inc."
+plans:
+  - name: default
+    description: Stats Server
+    free: True
+    metadata: {}
+    parameters: []

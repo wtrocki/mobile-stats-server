@@ -1,0 +1,5 @@
+- name: delete mobile-stats-server resource
+  command: oc delete {{ item }} mobile-stats-server -n {{ namespace }}
+  with_items:
+    - service
+    - route
